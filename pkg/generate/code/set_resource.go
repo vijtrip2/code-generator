@@ -882,9 +882,7 @@ func SetResourceIdentifiers(
 
 		// Still haven't determined the identifier? Panic
 		if primaryIdentifier == "" {
-			panic("Could not find primary identifier for " + r.Names.Original +
-				". Set `primary_identifier_field_name` for the " + op.Name +
-				" operation in the generator config.")
+			return primaryKeyOut
 		}
 	}
 
